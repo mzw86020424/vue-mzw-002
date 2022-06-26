@@ -1,5 +1,8 @@
 <template>
-  <div class="hello">
+  <div>
+    <p class="tweet">
+      Tweet {{ item.id }} : {{ item.text }}
+    </p>
   </div>
 </template>
 
@@ -7,14 +10,13 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'HelloWorld',
+  name: 'TweetComponent',
   props: {
-    msg: String,
+    item: Object
   },
 });
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h3 {
   margin: 40px 0 0;
